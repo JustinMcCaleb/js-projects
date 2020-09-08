@@ -3,9 +3,10 @@
 (function(){
 
     const listener = function (event) {
-        alert("you clicked a button");
+        document.getElementById('left-input').setAttribute('value', 'test');
     }
 
     document.getElementById('1').addEventListener('click', listener);
+    document.getElementById('-').addEventListener('click', listener);
 
 })();
