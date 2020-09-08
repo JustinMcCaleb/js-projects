@@ -33,7 +33,11 @@ body{
 }
 
 .button {
+    display: inline-block;
     height: 100px;
-    width: 100px;
+    width: 80px;
+    border: 2px solid black;
+    font-size: 3em;
+    text-decoration: none;
 }
 
