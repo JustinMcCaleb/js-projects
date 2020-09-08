@@ -2,7 +2,7 @@
 
 (function(){
 
-
+console.log("G2G")
 
 
 })();
