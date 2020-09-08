@@ -16,6 +16,6 @@
     document.getElementById('1').addEventListener('click', listener);
     document.getElementById('-').addEventListener('click', listener);
 
-    document.getElementById('C').addEventListener()
+    document.getElementById('C').addEventListener('click', clear);
 
 })();
