@@ -25,11 +25,13 @@
     }
     function plus(){
         document.getElementById('middle-input').setAttribute('value', '+');
-
+    }
+    function multiply(){
+        document.getElementById('middle-input').setAttribute('value', 'x');
     }
     document.getElementById('-').addEventListener('click', minus);
     document.getElementById('+').addEventListener('click', plus);
-    document.getElementById('*').addEventListener('click', operands);
+    document.getElementById('*').addEventListener('click', multiply);
     document.getElementById('/').addEventListener('click', operands);
 
 
