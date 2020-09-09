@@ -20,11 +20,15 @@
 
 
 
-    const operands = function () {
-        document.getElementById('middle-input').setAttribute('value', 'operands');
+    function minus() {
+        document.getElementById('middle-input').setAttribute('value', '-');
     }
-    document.getElementById('-').addEventListener('click', operands);
-    document.getElementById('+').addEventListener('click', operands);
+    function plus(){
+        document.getElementById('middle-input').setAttribute('value', '+');
+
+    }
+    document.getElementById('-').addEventListener('click', minus);
+    document.getElementById('+').addEventListener('click', plus);
     document.getElementById('*').addEventListener('click', operands);
     document.getElementById('/').addEventListener('click', operands);
 
