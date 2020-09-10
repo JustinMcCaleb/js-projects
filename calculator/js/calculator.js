@@ -9,7 +9,9 @@
         }
 
         clear() {
-
+            this.current = '';
+            this.previous = '';
+            this.operation = undefined;
         }
 
         delete() {
@@ -17,7 +19,7 @@
         }
 
         append(number) {
-
+            this.current = number;
         }
 
         chooseOperation(operation) {
@@ -29,7 +31,7 @@
         }
 
         updateDisplay() {
-
+            this.currentTextField.innerText = this.current;
         }
     }
 
@@ -39,6 +41,11 @@
     const equalsBtn = document.querySelector('[data-equals]');
     const previousTextField = document.querySelector('[data-previous]');
     const currentTextField = document.querySelector('[data-current]');
+
+
+
+
+
 
     function leftToRight(){
 
