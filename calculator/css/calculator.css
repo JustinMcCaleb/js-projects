@@ -14,7 +14,7 @@ body{
 
 .container{
     background-color: aliceblue;
-    height: 500px;
+    height: 700px;
     width: 400px;
     display: flex;
     flex-direction: column;
