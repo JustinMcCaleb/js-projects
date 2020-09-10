@@ -3,7 +3,9 @@
 (function(){
 
     class Calculator {
-        constructor() {
+        constructor(previousTextField, currentTextField) {
+            this.previousTextField = previousTextField;
+            this.currentTextField = currentTextField;
         }
     }
 
