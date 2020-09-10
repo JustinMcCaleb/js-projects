@@ -68,6 +68,11 @@
         })
     })
 
+    equalsBtn.addEventListener('click', button => {
+        calculator.compute();
+        calculator.updateDisplay();
+    })
+
 
     // function leftToRight(){
     //
