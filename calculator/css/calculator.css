@@ -27,10 +27,22 @@ body{
     display: flex;
 }
 
-.left-input, .middle-input, .right-input {
-    width: 33%;
-    height: 50%;
+.previous-text {
+    border: 2px solid blueviolet;
+    height: 100%;
+    width: 50%;
 }
+
+.current-text {
+    border: 2px solid blueviolet;
+    height: 100%;
+    width: 50%;
+}
+
+/*.left-input, .middle-input, .right-input {*/
+/*    width: 33%;*/
+/*    height: 50%;*/
+/*}*/
 
 .button {
     display: inline-block;
