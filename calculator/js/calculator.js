@@ -2,10 +2,17 @@
 
 (function(){
 
+    class Calculator {
+        constructor() {
+        }
+    }
+
     const numbersBtn = document.querySelectorAll('[data-number]');
     const operationBtn = document.querySelectorAll('[data-operation]');
     const clearBtn = document.querySelector('[data-clear]');
     const equalsBtn = document.querySelector('[data-equals]');
+    const previousTextField = document.querySelector('[data-previous]');
+    const currentTextField = document.querySelector('[data-current]');
 
     function leftToRight(){
 
