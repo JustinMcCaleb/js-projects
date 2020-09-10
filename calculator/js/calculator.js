@@ -43,7 +43,7 @@
     const currentTextField = document.querySelector('[data-current]');
 
 
-
+    const calculator = new Calculator(previousTextField, currentTextField);
 
 
 
