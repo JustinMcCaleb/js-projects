@@ -25,6 +25,10 @@
         }
 
         chooseOperation(operation) {
+            if(this.current === ''){return;}
+            if(this.previous !== ''){
+                this.compute();
+            }
             this.operation = operation;
             this.previous = this.current;
             this.current = '';
