@@ -95,6 +95,11 @@
         calculator.updateDisplay();
     })
 
+    clearBtn.addEventListener('click', button => {
+        calculator.clear();
+        calculator.updateDisplay();
+    })
+
 
     // function leftToRight(){
     //
