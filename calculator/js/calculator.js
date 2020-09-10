@@ -35,7 +35,29 @@
         }
 
         compute() {
-
+            let computation;
+            const prev = parseFloat(this.previous)
+            const cur = parseFloat(this.current)
+            if(isNaN(prev) || isNaN(cur)){return;}
+            switch (this.operation) {
+                case '+':
+                    computation = prev + cur;
+                    break;
+                case '-':
+                    computation = prev - cur;
+                    break;
+                case '*':
+                    computation = prev * cur;
+                    break;
+                case '/':
+                    computation = prev / cur;
+                    break;
+                default:
+                    return;
+            }
+            this.current = computation;
+            this.operation = undefined;
+            this.previous = '';
         }
 
         updateDisplay() {
