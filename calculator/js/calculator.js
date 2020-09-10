@@ -2,8 +2,10 @@
 
 (function(){
 
-    const numbers = document.querySelectorAll('[data-number]');
-    const operator
+    const numbersBtn = document.querySelectorAll('[data-number]');
+    const operationBtn = document.querySelectorAll('[data-operation]');
+    const clearBtn = document.querySelector('[data-clear]');
+    const equalsBtn = document.querySelector('[data-equals]');
 
     function leftToRight(){
 
