@@ -2,6 +2,24 @@
 
 (function(){
 
+    class Calculator {
+        constructor() {
+        }
+    }
+
+    const numbersBtn = document.querySelectorAll('[data-number]');
+    const operationBtn = document.querySelectorAll('[data-operation]');
+    const clearBtn = document.querySelector('[data-clear]');
+    const equalsBtn = document.querySelector('[data-equals]');
+    const previousTextField = document.querySelector('[data-previous]');
+    const currentTextField = document.querySelector('[data-current]');
+
+    function leftToRight(){
+
+
+
+    }
+
     const listener = function (event) {
         document.getElementById('left-input').setAttribute('value', 'test');
     }
@@ -20,13 +38,14 @@
 
 
 
-    const operands = function () {
-        document.getElementById('middle-input').setAttribute('value', 'operands');
-    }
-    document.getElementById('-').addEventListener('click', operands);
-    document.getElementById('+').addEventListener('click', operands);
-    document.getElementById('*').addEventListener('click', operands);
-    document.getElementById('/').addEventListener('click', operands);
+    function minus() {document.getElementById('middle-input').setAttribute('value', '-');}
+    function plus(){document.getElementById('middle-input').setAttribute('value', '+');}
+    function multiply(){document.getElementById('middle-input').setAttribute('value', 'x');}
+    function divide(){document.getElementById('middle-input').setAttribute('value', '/');}
+    document.getElementById('-').addEventListener('click', minus);
+    document.getElementById('+').addEventListener('click', plus);
+    document.getElementById('*').addEventListener('click', multiply);
+    document.getElementById('/').addEventListener('click', divide);
 
 
 
