@@ -45,6 +45,12 @@
 
     const calculator = new Calculator(previousTextField, currentTextField);
 
+    numbersBtn.forEach(button => {
+        button.addEventListener('click', () => {
+            calculator.append(button.innerText);
+            calculator.updateDisplay();
+        })
+    })
 
 
     function leftToRight(){
