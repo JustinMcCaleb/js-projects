@@ -25,7 +25,9 @@
         }
 
         chooseOperation(operation) {
-
+            this.operation = operation;
+            this.previous = this.current;
+            this.current = '';
         }
 
         compute() {
@@ -34,6 +36,7 @@
 
         updateDisplay() {
             this.currentTextField.innerText = this.current;
+            this.previousTextField.innerText = this.previous;
         }
     }
 
