@@ -7,6 +7,30 @@
             this.previousTextField = previousTextField;
             this.currentTextField = currentTextField;
         }
+
+        clear() {
+
+        }
+
+        delete() {
+
+        }
+
+        append(number) {
+
+        }
+
+        chooseOperation(operation) {
+
+        }
+
+        compute() {
+
+        }
+
+        updateDisplay() {
+
+        }
     }
 
     const numbersBtn = document.querySelectorAll('[data-number]');
