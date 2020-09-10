@@ -2,6 +2,15 @@
 
 (function(){
 
+    const numbers = document.querySelectorAll('[data-number]');
+    const operator
+
+    function leftToRight(){
+
+
+
+    }
+
     const listener = function (event) {
         document.getElementById('left-input').setAttribute('value', 'test');
     }
@@ -20,18 +29,10 @@
 
 
 
-    function minus() {
-        document.getElementById('middle-input').setAttribute('value', '-');
-    }
-    function plus(){
-        document.getElementById('middle-input').setAttribute('value', '+');
-    }
-    function multiply(){
-        document.getElementById('middle-input').setAttribute('value', 'x');
-    }
-    function divide(){
-        document.getElementById('middle-input').setAttribute('value', '/');
-    }
+    function minus() {document.getElementById('middle-input').setAttribute('value', '-');}
+    function plus(){document.getElementById('middle-input').setAttribute('value', '+');}
+    function multiply(){document.getElementById('middle-input').setAttribute('value', 'x');}
+    function divide(){document.getElementById('middle-input').setAttribute('value', '/');}
     document.getElementById('-').addEventListener('click', minus);
     document.getElementById('+').addEventListener('click', plus);
     document.getElementById('*').addEventListener('click', multiply);
