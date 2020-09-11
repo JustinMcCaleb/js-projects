@@ -75,7 +75,9 @@ body{
 .clear {grid-area: clear;}
 
 .button {
-    /*display: inline-block;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 1fr;
     width: 1fr;
     border: 1px solid black;
