@@ -8,7 +8,7 @@ html {
 }
 
 body{
-    background-color: #066681;
+    background-image: linear-gradient(to right, #0dbbd6, #042e5b);
     height: 100%;
     width: 100%;
     display: flex;
