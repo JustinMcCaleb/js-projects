@@ -9,6 +9,8 @@ html {
 }
 
 body{
+    /*font-family: 'Changa', sans-serif;*/
+    font-family: 'Alata', sans-serif;
     background-image: linear-gradient(to right, #0dbbd6, #042e5b);
     height: 100%;
     width: 100%;
