@@ -18,7 +18,7 @@ body{
 
 .container{
     background-color: aliceblue;
-    height: 700px;
+    /*height: 700px;*/
     width: 400px;
     /*display: flex;*/
     /*flex-direction: column;*/
@@ -27,7 +27,7 @@ body{
 
 .inputs {
     width: 400px;
-    height: 10%;
+    height: 50px;
     display: flex;
 }
 
@@ -52,7 +52,7 @@ body{
         "four five six minus"
         "seven eight nine multiply"
         "period zero divide equals"
-        "clear . . .";
+        "clear clear clear clear";
 }
 
 .zero {grid-area: zero;}
