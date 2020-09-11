@@ -20,8 +20,8 @@ body{
     background-color: aliceblue;
     height: 700px;
     width: 400px;
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
     border: black;
 }
 
@@ -45,16 +45,34 @@ body{
 
 .buttons {
     display: inline-grid;
+    width: 400px;
+    height: 400px;
     grid-template-areas:
         "one two three plus"
         "four five six minus"
         "seven eight nine mulitply"
         "period zero divide equals"
-        ". . clear . ."
+        ". . clear . "
 ;
 }
 
+.zero {grid-area: zero;}
+.one {grid-area: one;}
+.two {grid-area: two;}
+.three {grid-area: three;}
+.four {grid-area: four;}
+.five {grid-area: five;}
+.six {grid-area: six;}
+.seven {grid-area: seven;}
+.eight {grid-area: eight;}
+.nine {grid-area: nine;}
 
+.plus {grid-area: plus;}
+.minus {grid-area: minus;}
+.multiply {grid-area: multiply;}
+.divide {grid-area: divide;}
+.period {grid-area: period;}
+.equals {grid-area: equals;}
 
 .button {
     display: inline-block;
