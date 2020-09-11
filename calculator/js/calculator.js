@@ -101,11 +101,7 @@
     })
 
 
-    // function leftToRight(){
-    //
-    //
-    //
-    // }
+
     //
     // const listener = function (event) {
     //     document.getElementById('left-input').setAttribute('value', 'test');
