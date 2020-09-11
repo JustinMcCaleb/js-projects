@@ -30,13 +30,11 @@ body{
 }
 
 .previous-text {
-    border: 2px solid blueviolet;
     height: 100%;
     width: 50%;
 }
 
 .current-text {
-    border: 2px solid blueviolet;
     height: 100%;
     width: 50%;
 }
@@ -73,12 +71,13 @@ body{
 .clear {grid-area: clear;}
 
 .button {
+    color: #c198ec;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 1fr;
     width: 1fr;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     font-size: 3em;
     text-decoration: none;
     margin: 1px;
