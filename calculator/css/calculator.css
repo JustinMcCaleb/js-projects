@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
 html {
@@ -18,11 +19,8 @@ body{
 
 .container{
     background-color: aliceblue;
-    /*height: 700px;*/
     width: 400px;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    border: black;
+    background-image: linear-gradient(to right, #042e5b, #0dbbd6);
 }
 
 .inputs {
