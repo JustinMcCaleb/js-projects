@@ -76,10 +76,11 @@ body{
 
 .button {
     /*display: inline-block;*/
-    height: 50px;
-    width: 50px;
-    border: 2px solid black;
+    height: 1fr;
+    width: 1fr;
+    border: 1px solid black;
     font-size: 3em;
     text-decoration: none;
+    margin: 1px;
 }
 
