@@ -20,10 +20,10 @@ body{
 }
 
 .container{
-    background-color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.7);
     height: 500px;
     width: 400px;
-    background-image: linear-gradient(to right, #042e5b, #0dbbd6);
+    /*background-image: linear-gradient(to right, #042e5b, #0dbbd6);*/
     border-style: outset;
 }
 
@@ -84,14 +84,20 @@ body{
 .clear {grid-area: clear;}
 
 .button {
-    color: #c198ec;
+    color: #e8daf6;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 1fr;
     width: 1fr;
-    font-size: 3em;
+    font-size: 40px;
     text-decoration: none;
     margin: 1px;
+    /*transition: font-size .2s;*/
+}
+
+.button:hover {
+    /*font-size: 50px;*/
+    background-image: radial-gradient(#0dbbd6, #042e5b);
 }
 
