@@ -62,7 +62,7 @@
 
         updateDisplay() {
             this.currentTextField.innerText = this.current;
-            this.previousTextField.innerText = this.previous + this.operation;
+            this.previousTextField.innerText = this.previous;
         }
     }
 

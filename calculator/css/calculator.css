@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     height: 100vh;
     width: 100vw;
@@ -39,10 +43,18 @@ body{
     width: 50%;
 }
 
-/*.left-input, .middle-input, .right-input {*/
-/*    width: 33%;*/
-/*    height: 50%;*/
-/*}*/
+.buttons {
+    display: inline-grid;
+    grid-template-areas:
+        "one two three plus"
+        "four five six minus"
+        "seven eight nine mulitply"
+        "period zero divide equals"
+        ". . clear . ."
+;
+}
+
+
 
 .button {
     display: inline-block;
