@@ -107,6 +107,6 @@ body{
 
 .button:hover {
     background: rgb(9,163,201);
-    background: linear-gradient(45deg, rgba(9,163,201,0.8309698879551821) 25%, rgba(223,92,188,1) 75%);
+    background: linear-gradient(45deg, rgba(9,163,201,0.2455357142857143) 25%, rgba(223,92,188,0.2539390756302521) 75%);
 }
 
