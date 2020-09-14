@@ -31,8 +31,9 @@ body{
 }
 
 .heading {
-    margin-bottom: 2em;
-    font-size: 4em;
+    font-family: 'Ranchers', cursive;
+    /*margin-bottom: em;*/
+    font-size: 6em;
 }
 
 .inputs {
