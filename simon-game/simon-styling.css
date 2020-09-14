@@ -9,7 +9,7 @@ html {
 
 body {
     height: 100%;
-    background-color: blueviolet;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,14 +18,13 @@ body {
 .container {
     height: 500px;
     width: 500px;
-    border: 1px solid black;
+    border: 5px solid black;
     display: flex;
     flex-direction: column;
 }
 .upper-container, .lower-container {
     height: 50%;
     width: 100%;
-    border: 1px solid red;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -35,5 +34,23 @@ body {
 .color-box {
     height: 200px;
     width: 200px;
-    border: 1px solid whitesmoke;
+    border: 5px solid black;
+    transition: background-color;
 }
+
+.upper-left {
+    background-color: rgba(255,0,144,.6);
+}
+
+.upper-right {
+    background-color: rgba(77,77,255,.6);
+}
+
+.lower-left {
+    background-color: rgba(0,255,0,.6);
+}
+
+.lower-right {
+    background-color: rgba(255,255,0,.6);
+}
+
