@@ -13,7 +13,7 @@ body{
     font-family: 'Alata', sans-serif;
     /*background-image: linear-gradient(to right, #0dbbd6, #042e5b);*/
     background: rgb(9,163,201);
-    background: linear-gradient(90deg, rgba(9,163,201,0.8309698879551821) 0%, rgba(216,0,255,0.727328431372549) 100%);
+    background: linear-gradient(90deg, rgba(9, 163, 201, 0.83) 0%, rgba(216, 0, 255, 0.73) 100%);
     height: 100%;
     width: 100%;
     margin: 0;
@@ -32,8 +32,14 @@ body{
 
 .heading {
     font-family: 'Ranchers', cursive;
-    /*margin-bottom: em;*/
-    font-size: 6em;
+    margin-bottom: 50px;
+    font-size: 170px;
+    /*background: rgb(9,163,201);*/
+    background: -webkit-linear-gradient(45deg, rgba(216,0,255,1) 15%, rgba(9,163,201,1) 86%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*background: rgb(9,163,201);*/
+    /*background: linear-gradient(45deg, rgba(9,163,201,1) 15%, rgba(216,0,255,1) 86%);*/
 }
 
 .inputs {
