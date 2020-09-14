@@ -9,22 +9,36 @@ html {
 }
 
 body{
-    /*font-family: 'Changa', sans-serif;*/
     font-family: 'Alata', sans-serif;
-    background-image: linear-gradient(to right, #0dbbd6, #042e5b);
+    background: rgb(9,163,201);
+    background: linear-gradient(90deg, rgba(9, 163, 201, 0.83) 0%, rgba(216, 0, 255, 0.73) 100%);
     height: 100%;
     width: 100%;
+    margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .container{
     background-color: rgba(0, 0, 0, 0.7);
-    height: 500px;
-    width: 400px;
-    /*background-image: linear-gradient(to right, #042e5b, #0dbbd6);*/
+    height: 520px;
+    width: 420px;
     border-style: outset;
+    padding: 10px;
+}
+
+.heading {
+    font-family: 'Ranchers', cursive;
+    margin-bottom: 50px;
+    font-size: 170px;
+    /*background: rgb(9,163,201);*/
+    background: -webkit-linear-gradient(45deg, rgba(216,0,255,1) 15%, rgba(9,163,201,1) 86%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*background: rgb(9,163,201);*/
+    /*background: linear-gradient(45deg, rgba(9,163,201,1) 15%, rgba(216,0,255,1) 86%);*/
 }
 
 .inputs {
@@ -35,6 +49,7 @@ body{
 }
 
 .previous-text, .current-text {
+    color: aliceblue;
     display: flex;
     justify-content: end;
     padding-right: 2em;
@@ -54,7 +69,7 @@ body{
 
 .buttons {
     display: inline-grid;
-    width: 400px;
+    width: 394px;
     height: 400px;
     grid-template-areas:
         "one two three plus"
@@ -97,7 +112,7 @@ body{
 }
 
 .button:hover {
-    /*font-size: 50px;*/
-    background-image: radial-gradient(#0dbbd6, #042e5b);
+    background: rgb(9,163,201);
+    background: linear-gradient(45deg, rgba(9,163,201,0.2455357142857143) 25%, rgba(223,92,188,0.2539390756302521) 75%);
 }
 
