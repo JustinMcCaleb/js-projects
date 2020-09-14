@@ -14,9 +14,26 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+/*Container for the 4 color boxes*/
 .container {
     height: 500px;
     width: 500px;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.upper-container, .lower-container {
+    height: 50%;
+    width: 100%;
+    border: 1px solid red;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Class that modifies all color boxes*/
+.color-box {
+    height: 200px;
+    width: 200px;
+    border: 1px solid whitesmoke;
 }
