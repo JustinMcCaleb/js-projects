@@ -2,8 +2,25 @@
 
 $(document).ready(function(){
 
+    const getRandomArbitrary = (min, max) => {
+        let randNum = Math.random() * (max - min) + min;
+        return Math.round(randNum - 1);
+    }
+
+    const getRandomIndex = (array, num) => {
+        console.log(num);
+        return array[num];
+    }
+
     const startGame = () => {
-        alert('game started!')
+        // alert('game started!')
+
+        let randomNumber = getRandomArbitrary(0,4)
+
+        let boxes = ['ul', 'ur', 'll', 'lr'];
+        let pattern = [];
+        console.log(getRandomIndex(boxes, randomNumber));
+
     }
 
     const getClickedBox = (box) => {
