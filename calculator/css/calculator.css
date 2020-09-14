@@ -14,7 +14,9 @@ body{
     background-image: linear-gradient(to right, #0dbbd6, #042e5b);
     height: 100%;
     width: 100%;
+    margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -27,6 +29,11 @@ body{
     border-style: outset;
 }
 
+.heading {
+    margin-bottom: 2em;
+    font-size: 4em;
+}
+
 .inputs {
     width: 400px;
     height: 100px;
@@ -35,6 +42,7 @@ body{
 }
 
 .previous-text, .current-text {
+    color: aliceblue;
     display: flex;
     justify-content: end;
     padding-right: 2em;
