@@ -2,7 +2,7 @@
 
 (function (){
 
-    alert("Linked up")
+    // alert("Linked up")
 
 
 })();
