@@ -35,22 +35,36 @@ body {
     height: 200px;
     width: 200px;
     border: 5px solid black;
-    transition: background-color;
 }
+
 
 .upper-left {
-    background-color: rgba(255,0,144,.6);
+    background-color: rgba(255,0,144,.5);
+    transition: background-color;
 }
+.upper-left:hover {background-color: rgba(255,0,144,1);}
+
+
 
 .upper-right {
-    background-color: rgba(77,77,255,.6);
+    background-color: rgba(77,77,255,.5);
+    transition: background-color;
 }
+.upper-right:hover {background-color: rgba(77,77,255,1);}
+
+
 
 .lower-left {
-    background-color: rgba(0,255,0,.6);
+    background-color: rgba(0,255,0,.5);
+    transition: background-color;
 }
+.lower-left:hover{background-color: rgba(0,255,0,1);}
+
+
 
 .lower-right {
-    background-color: rgba(255,255,0,.6);
+    background-color: rgba(255,255,0,.5);
+    transition: background-color;
 }
+.lower-right:hover{background-color: rgba(255,255,0,1);}
 
