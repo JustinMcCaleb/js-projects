@@ -1,8 +1,13 @@
 "use strict";
 
-(function (){
+$(document).ready(function(){
+
     const startGame = () => {
         alert('game started')
+    }
+
+    const getClickedBox = (box) => {
+        console.log(box.id);
     }
 
 
@@ -14,5 +19,10 @@
     const upperRightBox = document.getElementById('ur');
     const lowerLeftBox = document.getElementById('ll');
     const lowerRightBox = document.getElementById('lr');
+    //click events on color boxes
+    upperLeftBox.addEventListener('click', getClickedBox(upperLeftBox));
+    upperRightBox.addEventListener('click', getClickedBox(upperRightBox));
+    lowerLeftBox.addEventListener('click', getClickedBox(lowerLeftBox));
+    lowerRightBox.addEventListener('click', getClickedBox(lowerRightBox));
 
-})();
+});
