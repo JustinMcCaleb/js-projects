@@ -2,6 +2,13 @@
 
 $(document).ready(function(){
 
+    let game = {
+        count: 0,
+        ids: ['#ul', '#ur', '#ll', '#lr'],
+        currentGame: [],
+        playerRound: []
+    }
+
     let pattern = [];
 
     const getRandomArbitrary = (min, max) => {
@@ -32,21 +39,18 @@ $(document).ready(function(){
                             }, 1000)
                         break;
                     case 'ur':
-                            // highlightBox('ur', 'rgba(77,77,255,1)', 'rgba(77,77,255,.3)');
                             $('#ur').css('background-color', 'rgba(77,77,255,1)');
                             setTimeout(() => {
                                 $('#ur').css('background-color', 'rgba(77,77,255,.3)');
                             }, 1000)
                         break;
                     case 'll':
-                            // highlightBox('ll', 'rgba(0,255,0,1)', 'rgba(0,255,0,.3)');
                             $('#ll').css('background-color', 'rgba(0,255,0,1)');
                             setTimeout(() => {
                                 $('#ll').css('background-color', 'rgba(0,255,0,.3)');
                             }, 1000)
                         break;
                     case 'lr':
-                            // highlightBox('lr', 'rgba(255,255,0,1)', 'rgba(255,255,0,.3)');
                             $('#lr').css('background-color', 'rgba(255,255,0,1)');
                             setTimeout(() => {
                                 $('#lr').css('background-color', 'rgba(255,255,0,.3)');
@@ -56,12 +60,15 @@ $(document).ready(function(){
                 count++
             }
         }, 2000)
+    }
+
+    const userRound = () => {
+        //need to get users click pattern
+        let userPattern = [];
+        console.log($('#ul').click() + "1");
 
 
-        // $('#'+ id).css('background-color', rgba);
-        // setTimeout(() => {
-        //     $('#'+ id).css('background-color', rgba2);
-        // }, 1000)
+        //if user click pattern matches pattern then call startGame again
     }
 
     const newRound = () => {
@@ -77,30 +84,27 @@ $(document).ready(function(){
                 case 'ul':
                     pattern.push('ul');
                     highlightBox();
+                    userRound();
                     break;
                 case 'ur':
                     pattern.push('ur');
                     highlightBox();
+                    userRound();
                     break;
                 case 'll':
                     pattern.push('ll');
                     highlightBox();
+                    userRound();
                     break;
                 case 'lr':
                     pattern.push('lr');
                     highlightBox();
+                    userRound();
                     break;
                 }
         }, 2000)
     }
 
-    const userRound = (pattern) => {
-        //need to get users click pattern
-        let userPattern = [];
-
-
-        //if user click pattern matches pattern then call startGame again
-    }
 
 
     const startGame = () => {
