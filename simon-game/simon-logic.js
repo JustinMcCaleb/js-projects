@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
 
+    let pattern = ['ul'];
+
     const getRandomArbitrary = (min, max) => {
         let randNum = Math.random() * (max - min) + min;
         return Math.round(randNum - 1);
@@ -10,6 +12,38 @@ $(document).ready(function(){
     const getRandomIndex = (array, num) => {
         console.log(num);
         return array[num];
+    }
+
+    const newRound = () => {
+        setTimeout(() => {
+
+            let randomNumber = getRandomArbitrary(0,4)
+
+            let boxes = ['ul', 'ur', 'll', 'lr'];
+
+            switch (getRandomIndex(boxes, randomNumber)){
+                case 'ul':
+                    console.log('UL');
+                    highlightBox('ul', 'rgba(255,0,144,1)', 'rgba(255,0,144,.5)');
+                    pattern.push('ul');
+                    break;
+                case 'ur':
+                    console.log('UR');
+                    highlightBox('ur', 'rgba(77,77,255,1)', 'rgba(77,77,255,.5)');
+                    pattern.push('ur');
+                    break;
+                case 'll':
+                    console.log('LL');
+                    highlightBox('ll', 'rgba(0,255,0,1)', 'rgba(0,255,0,.5)');
+                    pattern.push('ll');
+                    break;
+                case 'lr':
+                    console.log('LR');
+                    highlightBox('lr', 'rgba(255,255,0,1)', 'rgba(255,255,0,.5)');
+                    pattern.push('lr');
+                    break;
+                }
+        }, 2000)
     }
 
     const userRound = (pattern) => {
@@ -24,41 +58,8 @@ $(document).ready(function(){
     }
 
     const startGame = () => {
+        newRound();
 
-        setTimeout(() => {
-
-        let randomNumber = getRandomArbitrary(0,4)
-
-        let boxes = ['ul', 'ur', 'll', 'lr'];
-        let pattern = ['ul'];
-        // console.log(getRandomIndex(boxes, randomNumber));
-
-        for(let i = 0; i <= pattern.length; i++){
-
-            switch (getRandomIndex(boxes, randomNumber)){
-                case 'ul':
-                    console.log('UL');
-                    highlightBox('ul', 'rgba(255,0,144,1)', 'rgba(255,0,144,.5)');
-                    // pattern.push('ul');
-                    break;
-                case 'ur':
-                    console.log('UR');
-                    highlightBox('ur', 'rgba(77,77,255,1)', 'rgba(77,77,255,.5)');
-                    // pattern.push('ur');
-                    break;
-                case 'll':
-                    console.log('LL');
-                    highlightBox('ll', 'rgba(0,255,0,1)', 'rgba(0,255,0,.5)');
-                    // pattern.push('ll');
-                    break;
-                case 'lr':
-                    console.log('LR');
-                    highlightBox('lr', 'rgba(255,255,0,1)', 'rgba(255,255,0,.5)');
-                    // pattern.push('lr');
-                    break;
-            }
-        }
-        }, 2000)
     }
 
     const getClickedBox = (box) => {
