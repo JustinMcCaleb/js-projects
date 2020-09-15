@@ -12,6 +12,10 @@ $(document).ready(function(){
         return array[num];
     }
 
+    const round = () => {
+
+    }
+
     const startGame = () => {
         // alert('game started!')
 
@@ -19,7 +23,26 @@ $(document).ready(function(){
 
         let boxes = ['ul', 'ur', 'll', 'lr'];
         let pattern = [];
-        console.log(getRandomIndex(boxes, randomNumber));
+        // console.log(getRandomIndex(boxes, randomNumber));
+
+        switch (getRandomIndex(boxes, randomNumber)){
+            case 'ul':
+                console.log('UL');
+                $('#ul').css('background-color', 'rgba(255,0,144,1)');
+                break;
+            case 'ur':
+                console.log('UR');
+                $('#ur').css('background-color', 'rgba(77,77,255,1)')
+                break;
+            case 'lr':
+                console.log('LR');
+                $('#lr').css('background-color', 'rgba(0,255,0,1)')
+                break;
+            case 'll':
+                console.log('LL');
+                $('#ll').css('background-color', 'rgba(255,255,0,1)')
+                break;
+        }
 
     }
 
