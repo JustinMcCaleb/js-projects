@@ -15,7 +15,8 @@ $(document).ready(function(){
     }
 
     const highlightBox = () => {
-
+        console.log("==========================")
+        console.log(pattern);
         let count = 0;
 
         let interval = setInterval(() => {
@@ -23,38 +24,38 @@ $(document).ready(function(){
                 clearInterval(interval)
                 console.log("all done");
             }else{
-                count++
                 switch (pattern[count]){
                     case 'ul':
                             $('#ul').css('background-color', 'rgba(255,0,144,1)');
                             setTimeout(() => {
-                                $('#ul').css('background-color', 'rgba(255,0,144,.5)');
+                                $('#ul').css('background-color', 'rgba(255,0,144,.3)');
                             }, 1000)
                         break;
                     case 'ur':
-                            // highlightBox('ur', 'rgba(77,77,255,1)', 'rgba(77,77,255,.5)');
+                            // highlightBox('ur', 'rgba(77,77,255,1)', 'rgba(77,77,255,.3)');
                             $('#ur').css('background-color', 'rgba(77,77,255,1)');
                             setTimeout(() => {
-                                $('#ur').css('background-color', 'rgba(77,77,255,.5)');
+                                $('#ur').css('background-color', 'rgba(77,77,255,.3)');
                             }, 1000)
                         break;
                     case 'll':
-                            // highlightBox('ll', 'rgba(0,255,0,1)', 'rgba(0,255,0,.5)');
+                            // highlightBox('ll', 'rgba(0,255,0,1)', 'rgba(0,255,0,.3)');
                             $('#ll').css('background-color', 'rgba(0,255,0,1)');
                             setTimeout(() => {
-                                $('#ll').css('background-color', 'rgba(0,255,0,.5)');
+                                $('#ll').css('background-color', 'rgba(0,255,0,.3)');
                             }, 1000)
                         break;
                     case 'lr':
-                            // highlightBox('lr', 'rgba(255,255,0,1)', 'rgba(255,255,0,.5)');
+                            // highlightBox('lr', 'rgba(255,255,0,1)', 'rgba(255,255,0,.3)');
                             $('#lr').css('background-color', 'rgba(255,255,0,1)');
                             setTimeout(() => {
-                                $('#lr').css('background-color', 'rgba(255,255,0,.5)');
+                                $('#lr').css('background-color', 'rgba(255,255,0,.3)');
                             }, 1000)
                         break;
                 }
+                count++
             }
-        }, 1000)
+        }, 2000)
 
 
         // $('#'+ id).css('background-color', rgba);
@@ -66,9 +67,11 @@ $(document).ready(function(){
     const newRound = () => {
         setTimeout(() => {
 
-            let randomNumber = getRandomArbitrary(0,4)
+            let randomNumber = getRandomArbitrary(1,4)
 
             let boxes = ['ul', 'ur', 'll', 'lr'];
+
+            console.log("RANDOM INDEX: " + getRandomIndex(boxes, randomNumber))
 
             switch (getRandomIndex(boxes, randomNumber)){
                 case 'ul':
@@ -89,7 +92,6 @@ $(document).ready(function(){
                     break;
                 }
         }, 2000)
-        console.log(pattern);
     }
 
     const userRound = (pattern) => {
@@ -103,7 +105,6 @@ $(document).ready(function(){
 
     const startGame = () => {
         newRound();
-
     }
 
     const getClickedBox = (box) => {
