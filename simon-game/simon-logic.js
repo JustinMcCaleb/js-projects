@@ -16,12 +16,16 @@ $(document).ready(function(){
 
     }
 
-    const highlightBox = (id, rgba) => {
+    const highlightBox = (id, rgba, rgba2) => {
         $('#'+ id).css('background-color', rgba);
+        setTimeout(() => {
+            $('#'+ id).css('background-color', rgba2);
+        }, 1000)
     }
 
     const startGame = () => {
-        // alert('game started!')
+
+        setTimeout(() => {
 
         let randomNumber = getRandomArbitrary(0,4)
 
@@ -34,26 +38,27 @@ $(document).ready(function(){
             switch (getRandomIndex(boxes, randomNumber)){
                 case 'ul':
                     console.log('UL');
-                    highlightBox('ul', 'rgba(255,0,144,1)');
+                    highlightBox('ul', 'rgba(255,0,144,1)', 'rgba(255,0,144,.5)');
                     // pattern.push('ul');
                     break;
                 case 'ur':
                     console.log('UR');
-                    highlightBox('ur', 'rgba(77,77,255,1)');
+                    highlightBox('ur', 'rgba(77,77,255,1)', 'rgba(77,77,255,.5)');
                     // pattern.push('ur');
-                    break;
-                case 'lr':
-                    console.log('LR');
-                    highlightBox('lr', 'rgba(255,255,0,1)');
-                    // pattern.push('lr');
                     break;
                 case 'll':
                     console.log('LL');
-                    highlightBox('ll', 'rgba(0,255,0,1)');
+                    highlightBox('ll', 'rgba(0,255,0,1)', 'rgba(0,255,0,.5)');
                     // pattern.push('ll');
+                    break;
+                case 'lr':
+                    console.log('LR');
+                    highlightBox('lr', 'rgba(255,255,0,1)', 'rgba(255,255,0,.5)');
+                    // pattern.push('lr');
                     break;
             }
         }
+        }, 2000)
     }
 
     const getClickedBox = (box) => {
