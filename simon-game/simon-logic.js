@@ -113,7 +113,16 @@ $(document).ready(function(){
         const lowerLeftBox = document.getElementById('ll');
         const lowerRightBox = document.getElementById('lr');
         upperLeftBox.onclick = () => {
-            console.log('CLICKED');
+            console.log('UL CLICKED');
+        }
+        upperRightBox.onclick = () => {
+            console.log('UR CLICKED');
+        }
+        lowerLeftBox.onclick = () => {
+            console.log('LL CLICKED');
+        }
+        lowerRightBox.onclick = () => {
+            console.log('LR CLICKED');
         }
     }
 
