@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
 
-    let game = {
+    let Game = {
         count: 0,
         ids: ['#ul', '#ur', '#ll', '#lr'],
         currentGame: [],
@@ -65,7 +65,7 @@ $(document).ready(function(){
     const userRound = () => {
         //need to get users click pattern
         let userPattern = [];
-        console.log($('#ul').click() + "1");
+
 
 
         //if user click pattern matches pattern then call startGame again
@@ -84,22 +84,18 @@ $(document).ready(function(){
                 case 'ul':
                     pattern.push('ul');
                     highlightBox();
-                    userRound();
                     break;
                 case 'ur':
                     pattern.push('ur');
                     highlightBox();
-                    userRound();
                     break;
                 case 'll':
                     pattern.push('ll');
                     highlightBox();
-                    userRound();
                     break;
                 case 'lr':
                     pattern.push('lr');
                     highlightBox();
-                    userRound();
                     break;
                 }
         }, 2000)
@@ -108,11 +104,30 @@ $(document).ready(function(){
 
 
     const startGame = () => {
+
+        let game = Object.create(Game);
+
         newRound();
+        const upperLeftBox = document.getElementById('ul');
+        const upperRightBox = document.getElementById('ur');
+        const lowerLeftBox = document.getElementById('ll');
+        const lowerRightBox = document.getElementById('lr');
+        upperLeftBox.onclick = () => {
+            console.log('UL CLICKED');
+        }
+        upperRightBox.onclick = () => {
+            console.log('UR CLICKED');
+        }
+        lowerLeftBox.onclick = () => {
+            console.log('LL CLICKED');
+        }
+        lowerRightBox.onclick = () => {
+            console.log('LR CLICKED');
+        }
     }
 
-    const getClickedBox = (box) => {
-        console.log(box.id);
+    const clicked = (box) => {
+        console.log(box);
     }
 
 
@@ -120,10 +135,6 @@ $(document).ready(function(){
     $('#start-button').click(startGame);
     // startButton.addEventListener('click', startGame);
 
-    const upperLeftBox = document.getElementById('ul');
-    const upperRightBox = document.getElementById('ur');
-    const lowerLeftBox = document.getElementById('ll');
-    const lowerRightBox = document.getElementById('lr');
     //click events on color boxes
     // upperLeftBox.addEventListener('click', getClickedBox(upperLeftBox));
     // upperRightBox.addEventListener('click', getClickedBox(upperRightBox));
