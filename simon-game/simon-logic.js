@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
 
-    let game = {
+    let Game = {
         count: 0,
         ids: ['#ul', '#ur', '#ll', '#lr'],
         currentGame: [],
@@ -104,7 +104,11 @@ $(document).ready(function(){
 
 
     const startGame = () => {
+
+        let game = Object.create(Game);
+
         newRound();
+        upperLeftBox.click()
     }
 
     const getClickedBox = (box) => {
