@@ -108,11 +108,17 @@ $(document).ready(function(){
         let game = Object.create(Game);
 
         newRound();
-        upperLeftBox.click()
+        const upperLeftBox = document.getElementById('ul');
+        const upperRightBox = document.getElementById('ur');
+        const lowerLeftBox = document.getElementById('ll');
+        const lowerRightBox = document.getElementById('lr');
+        upperLeftBox.onclick = () => {
+            console.log('CLICKED');
+        }
     }
 
-    const getClickedBox = (box) => {
-        console.log(box.id);
+    const clicked = (box) => {
+        console.log(box);
     }
 
 
@@ -120,10 +126,6 @@ $(document).ready(function(){
     $('#start-button').click(startGame);
     // startButton.addEventListener('click', startGame);
 
-    const upperLeftBox = document.getElementById('ul');
-    const upperRightBox = document.getElementById('ur');
-    const lowerLeftBox = document.getElementById('ll');
-    const lowerRightBox = document.getElementById('lr');
     //click events on color boxes
     // upperLeftBox.addEventListener('click', getClickedBox(upperLeftBox));
     // upperRightBox.addEventListener('click', getClickedBox(upperRightBox));
