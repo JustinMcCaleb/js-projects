@@ -40,7 +40,7 @@ body {
 
 
 .upper-left {
-    background-color: rgba(255,0,144,.5);
+    background-color: rgba(255,0,144,.3);
     transition: background-color;
 }
 .upper-left:hover {background-color: rgba(255,0,144,1);}
@@ -48,7 +48,7 @@ body {
 
 
 .upper-right {
-    background-color: rgba(77,77,255,.5);
+    background-color: rgba(77,77,255,.3);
     transition: background-color;
 }
 .upper-right:hover {background-color: rgba(77,77,255,1);}
@@ -56,7 +56,7 @@ body {
 
 
 .lower-left {
-    background-color: rgba(0,255,0,.5);
+    background-color: rgba(0,255,0,.3);
     transition: background-color;
 }
 .lower-left:hover{background-color: rgba(0,255,0,1);}
@@ -64,7 +64,7 @@ body {
 
 
 .lower-right {
-    background-color: rgba(255,255,0,.5);
+    background-color: rgba(255,255,0,.3);
     transition: background-color;
 }
 .lower-right:hover{background-color: rgba(255,255,0,1);}
