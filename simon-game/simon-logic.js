@@ -65,7 +65,7 @@ $(document).ready(function(){
     const userRound = () => {
         //need to get users click pattern
         let userPattern = [];
-        console.log($('#ul').click() + "1");
+
 
 
         //if user click pattern matches pattern then call startGame again
@@ -84,22 +84,18 @@ $(document).ready(function(){
                 case 'ul':
                     pattern.push('ul');
                     highlightBox();
-                    userRound();
                     break;
                 case 'ur':
                     pattern.push('ur');
                     highlightBox();
-                    userRound();
                     break;
                 case 'll':
                     pattern.push('ll');
                     highlightBox();
-                    userRound();
                     break;
                 case 'lr':
                     pattern.push('lr');
                     highlightBox();
-                    userRound();
                     break;
                 }
         }, 2000)
