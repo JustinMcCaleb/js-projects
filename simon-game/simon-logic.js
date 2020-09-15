@@ -34,23 +34,22 @@ $(document).ready(function(){
             switch (getRandomIndex(boxes, randomNumber)){
                 case 'ul':
                     console.log('UL');
-                    // $('#ul').css('background-color', 'rgba(255,0,144,1)');
                     highlightBox('ul', 'rgba(255,0,144,1)');
                     // pattern.push('ul');
                     break;
                 case 'ur':
                     console.log('UR');
-                    $('#ur').css('background-color', 'rgba(77,77,255,1)');
+                    highlightBox('ur', 'rgba(77,77,255,1)');
                     // pattern.push('ur');
                     break;
                 case 'lr':
                     console.log('LR');
-                    $('#lr').css('background-color', 'rgba(255,255,0,1)');
+                    highlightBox('lr', 'rgba(255,255,0,1)');
                     // pattern.push('lr');
                     break;
                 case 'll':
                     console.log('LL');
-                    $('#ll').css('background-color', 'rgba(0,255,0,1)');
+                    highlightBox('ll', 'rgba(0,255,0,1)');
                     // pattern.push('ll');
                     break;
             }
