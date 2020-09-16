@@ -44,19 +44,24 @@ $(document).ready(function(){
                             // $('#ur').css('background-color', 'rgba(77,77,255,1)');
                             $('#ur').addClass('ur-active');
                             setTimeout(() => {
-                                $('#ur').css('background-color', 'rgba(77,77,255,.3)');
+                                // $('#ur').css('background-color', 'rgba(77,77,255,.3)');
+                                $('#ur').removeClass('ur-active');
                             }, 1000)
                         break;
                     case 'll':
-                            $('#ll').css('background-color', 'rgba(0,255,0,1)');
+                            // $('#ll').css('background-color', 'rgba(0,255,0,1)');
+                            $('#ll').addClass('ll-active')
                             setTimeout(() => {
-                                $('#ll').css('background-color', 'rgba(0,255,0,.3)');
+                                // $('#ll').css('background-color', 'rgba(0,255,0,.3)');
+                                $('#ll').removeClass('ll-active')
                             }, 1000)
                         break;
                     case 'lr':
-                            $('#lr').css('background-color', 'rgba(255,255,0,1)');
+                            // $('#lr').css('background-color', 'rgba(255,255,0,1)');
+                            $('#lr').addClass('lr-active')
                             setTimeout(() => {
-                                $('#lr').css('background-color', 'rgba(255,255,0,.3)');
+                                // $('#lr').css('background-color', 'rgba(255,255,0,.3)');
+                                $('#lr').removeClass('lr-active')
                             }, 1000)
                         break;
                 }
