@@ -73,6 +73,11 @@ body {
 .lr-active{background-color: rgba(255,255,0,1);}
 .lower-right:hover{background-color: rgba(255,255,0,1); !important;}
 
+.scoreboard{
+    display: flex;
+    flex-direction: column;
+}
+
 .scoreboard-text {
     font-size: 3em;
 }
