@@ -76,10 +76,18 @@ body {
 .scoreboard{
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 .scoreboard-text {
+    display: flex;
+    justify-content: center;
     font-size: 3em;
+}
+
+.start-game {
+    height: 30px;
+    width: 200px;
 }
 
 
