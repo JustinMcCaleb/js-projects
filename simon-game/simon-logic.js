@@ -10,6 +10,7 @@ $(document).ready(function(){
     }
 
     let pattern = [];
+    let playerPattern = [];
 
     const getRandomArbitrary = (min, max) => {
         let randNum = Math.random() * (max - min) + min;
@@ -33,27 +34,35 @@ $(document).ready(function(){
             }else{
                 switch (pattern[count]){
                     case 'ul':
-                            $('#ul').css('background-color', 'rgba(255,0,144,1)');
+                            // $('#ul').css('background-color', 'rgba(255,0,144,1)');
+                            $('#ul').addClass('ul-active');
                             setTimeout(() => {
-                                $('#ul').css('background-color', 'rgba(255,0,144,.3)');
+                                // $('#ul').css('background-color', 'rgba(255,0,144,.3)');
+                                $('#ul').removeClass('ul-active');
                             }, 1000)
                         break;
                     case 'ur':
-                            $('#ur').css('background-color', 'rgba(77,77,255,1)');
+                            // $('#ur').css('background-color', 'rgba(77,77,255,1)');
+                            $('#ur').addClass('ur-active');
                             setTimeout(() => {
-                                $('#ur').css('background-color', 'rgba(77,77,255,.3)');
+                                // $('#ur').css('background-color', 'rgba(77,77,255,.3)');
+                                $('#ur').removeClass('ur-active');
                             }, 1000)
                         break;
                     case 'll':
-                            $('#ll').css('background-color', 'rgba(0,255,0,1)');
+                            // $('#ll').css('background-color', 'rgba(0,255,0,1)');
+                            $('#ll').addClass('ll-active')
                             setTimeout(() => {
-                                $('#ll').css('background-color', 'rgba(0,255,0,.3)');
+                                // $('#ll').css('background-color', 'rgba(0,255,0,.3)');
+                                $('#ll').removeClass('ll-active')
                             }, 1000)
                         break;
                     case 'lr':
-                            $('#lr').css('background-color', 'rgba(255,255,0,1)');
+                            // $('#lr').css('background-color', 'rgba(255,255,0,1)');
+                            $('#lr').addClass('lr-active')
                             setTimeout(() => {
-                                $('#lr').css('background-color', 'rgba(255,255,0,.3)');
+                                // $('#lr').css('background-color', 'rgba(255,255,0,.3)');
+                                $('#lr').removeClass('lr-active')
                             }, 1000)
                         break;
                 }
@@ -61,6 +70,7 @@ $(document).ready(function(){
             }
         }, 2000)
     }
+
 
     const userRound = () => {
         //need to get users click pattern
@@ -72,6 +82,7 @@ $(document).ready(function(){
     }
 
     const newRound = () => {
+        playerPattern = [];
         setTimeout(() => {
 
             let randomNumber = getRandomArbitrary(1,4)
@@ -98,6 +109,11 @@ $(document).ready(function(){
                     highlightBox();
                     break;
                 }
+            if(playerPattern.length === pattern.length){
+                if(JSON.stringify(playerPattern) === JSON.stringify(pattern)){
+                    startGame();
+                }
+            }
         }, 2000)
     }
 
@@ -108,22 +124,29 @@ $(document).ready(function(){
         let game = Object.create(Game);
 
         newRound();
+        game.playerRound = [];
         const upperLeftBox = document.getElementById('ul');
         const upperRightBox = document.getElementById('ur');
         const lowerLeftBox = document.getElementById('ll');
         const lowerRightBox = document.getElementById('lr');
         upperLeftBox.onclick = () => {
-            console.log('UL CLICKED');
+            playerPattern.push('ul');
+            console.log(playerPattern);
         }
         upperRightBox.onclick = () => {
-            console.log('UR CLICKED');
+            playerPattern.push('ur');
+            console.log(playerPattern);
         }
         lowerLeftBox.onclick = () => {
-            console.log('LL CLICKED');
+            playerPattern.push('ll')
+            console.log(playerPattern);
         }
         lowerRightBox.onclick = () => {
-            console.log('LR CLICKED');
+            playerPattern.push('lr');
+            console.log(playerPattern);
         }
+        console.log("PLAYER ROUND: " + playerPattern.length);
+        console.log("PATTERN LENGTH: " + pattern.length);
     }
 
     const clicked = (box) => {

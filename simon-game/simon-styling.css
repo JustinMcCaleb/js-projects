@@ -43,7 +43,8 @@ body {
     background-color: rgba(255,0,144,.3);
     transition: background-color;
 }
-.upper-left:hover {background-color: rgba(255,0,144,1);}
+.ul-active {background-color: rgba(255,0,144,1);}
+.upper-left:hover {background-color: rgba(255,0,144,1); !important;}
 
 
 
@@ -51,7 +52,8 @@ body {
     background-color: rgba(77,77,255,.3);
     transition: background-color;
 }
-.upper-right:hover {background-color: rgba(77,77,255,1);}
+.ur-active {background-color: rgba(77,77,255,1);}
+.upper-right:hover {background-color: rgba(77,77,255,1); !important;}
 
 
 
@@ -59,7 +61,8 @@ body {
     background-color: rgba(0,255,0,.3);
     transition: background-color;
 }
-.lower-left:hover{background-color: rgba(0,255,0,1);}
+.ll-active{background-color: rgba(0,255,0,1);}
+.lower-left:hover{background-color: rgba(0,255,0,1); !important;}
 
 
 
@@ -67,5 +70,6 @@ body {
     background-color: rgba(255,255,0,.3);
     transition: background-color;
 }
-.lower-right:hover{background-color: rgba(255,255,0,1);}
+.lr-active{background-color: rgba(255,255,0,1);}
+.lower-right:hover{background-color: rgba(255,255,0,1); !important;}
 
