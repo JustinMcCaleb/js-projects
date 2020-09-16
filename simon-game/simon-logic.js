@@ -10,6 +10,7 @@ $(document).ready(function(){
     }
 
     let pattern = [];
+    let playerPattern = [];
 
     const getRandomArbitrary = (min, max) => {
         let randNum = Math.random() * (max - min) + min;
@@ -70,6 +71,7 @@ $(document).ready(function(){
         }, 2000)
     }
 
+
     const userRound = () => {
         //need to get users click pattern
         let userPattern = [];
@@ -106,6 +108,11 @@ $(document).ready(function(){
                     highlightBox();
                     break;
                 }
+            if(playerPattern.length === pattern.length){
+                if(JSON.stringify(playerPattern) === JSON.stringify(pattern)){
+                    startGame();
+                }
+            }
         }, 2000)
     }
 
@@ -116,26 +123,29 @@ $(document).ready(function(){
         let game = Object.create(Game);
 
         newRound();
+        game.playerRound = [];
         const upperLeftBox = document.getElementById('ul');
         const upperRightBox = document.getElementById('ur');
         const lowerLeftBox = document.getElementById('ll');
         const lowerRightBox = document.getElementById('lr');
         upperLeftBox.onclick = () => {
-            game.playerRound.push('ul');
-            console.log('UL CLICKED');
+            playerPattern.push('ul');
+            console.log(playerPattern);
         }
         upperRightBox.onclick = () => {
-            game.playerRound.push('ur');
-            console.log('UR CLICKED');
+            playerPattern.push('ur');
+            console.log(playerPattern);
         }
         lowerLeftBox.onclick = () => {
-            game.playerRound.push('ll')
-            console.log('LL CLICKED');
+            playerPattern.push('ll')
+            console.log(playerPattern);
         }
         lowerRightBox.onclick = () => {
-            game.playerRound.push('lr');
-            console.log('LR CLICKED');
+            playerPattern.push('lr');
+            console.log(playerPattern);
         }
+        console.log("PLAYER ROUND: " + playerPattern.length);
+        console.log("PATTERN LENGTH: " + pattern.length);
     }
 
     const clicked = (box) => {
