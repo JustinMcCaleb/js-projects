@@ -82,6 +82,7 @@ $(document).ready(function(){
     }
 
     const newRound = () => {
+
         playerPattern = [];
         setTimeout(() => {
 

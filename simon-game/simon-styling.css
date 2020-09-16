@@ -88,6 +88,8 @@ body {
 .start-game {
     height: 30px;
     width: 200px;
+    font-size: 20px;
+    background-color: #00C9FF;
 }
 
 
