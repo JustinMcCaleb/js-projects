@@ -121,15 +121,19 @@ $(document).ready(function(){
         const lowerLeftBox = document.getElementById('ll');
         const lowerRightBox = document.getElementById('lr');
         upperLeftBox.onclick = () => {
+            game.playerRound.push('ul');
             console.log('UL CLICKED');
         }
         upperRightBox.onclick = () => {
+            game.playerRound.push('ur');
             console.log('UR CLICKED');
         }
         lowerLeftBox.onclick = () => {
+            game.playerRound.push('ll')
             console.log('LL CLICKED');
         }
         lowerRightBox.onclick = () => {
+            game.playerRound.push('lr');
             console.log('LR CLICKED');
         }
     }
