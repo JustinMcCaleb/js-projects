@@ -82,6 +82,10 @@ $(document).ready(function(){
     }
 
     const newRound = () => {
+        let scoreboardCounter = document.getElementsByClassName('scoreboard-text');
+        let round = 0;
+        round++;
+        scoreboardCounter.innerText = 'Round: ' + round;
         playerPattern = [];
         setTimeout(() => {
 
