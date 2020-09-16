@@ -33,13 +33,16 @@ $(document).ready(function(){
             }else{
                 switch (pattern[count]){
                     case 'ul':
-                            $('#ul').css('background-color', 'rgba(255,0,144,1)');
+                            // $('#ul').css('background-color', 'rgba(255,0,144,1)');
+                            $('#ul').addClass('ul-active');
                             setTimeout(() => {
-                                $('#ul').css('background-color', 'rgba(255,0,144,.3)');
+                                // $('#ul').css('background-color', 'rgba(255,0,144,.3)');
+                                $('#ul').removeClass('ul-active');
                             }, 1000)
                         break;
                     case 'ur':
-                            $('#ur').css('background-color', 'rgba(77,77,255,1)');
+                            // $('#ur').css('background-color', 'rgba(77,77,255,1)');
+                            $('#ur').addClass('ur-active');
                             setTimeout(() => {
                                 $('#ur').css('background-color', 'rgba(77,77,255,.3)');
                             }, 1000)
