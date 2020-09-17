@@ -10,15 +10,17 @@ $(document).ready(function(){
             this.playerRound = [];
         }
 
+        //resets counts and arrays to zero
         newGame() {
             this.count = 0;
             this.currentGame = [];
             this.playerRound = [];
         }
 
+        //function that highlights boxes based on the elements in the currentGame array
         boxHighlightPattern() {
             let interval = setInterval(() => {
-                if(count >= pattern.length){
+                if(this.count >= this.currentGame.length){
                     clearInterval(interval)
                     console.log("all done");
                 }else{
@@ -53,6 +55,8 @@ $(document).ready(function(){
             }, 2000)
         }
 
+        updateScoreboard() {}
+
 
         newRound() {
             let scoreboardCounter = document.getElementsByClassName('scoreboard-text');
@@ -70,24 +74,24 @@ $(document).ready(function(){
 
                 switch (getRandomIndex(boxes, randomNumber)){
                     case 'ul':
-                        pattern.push('ul');
-                        highlightBox();
+                        this.currentGame.push('ul');
+                        this.boxHighlightPattern();
                         break;
                     case 'ur':
-                        pattern.push('ur');
-                        highlightBox();
+                        this.currentGame.push('ur');
+                        this.boxHighlightPattern();
                         break;
                     case 'll':
-                        pattern.push('ll');
-                        highlightBox();
+                        this.currentGame.push('ll');
+                        this.boxHighlightPattern();
                         break;
                     case 'lr':
-                        pattern.push('lr');
-                        highlightBox();
+                        this.currentGame.push('lr');
+                        this.boxHighlightPattern();
                         break;
                 }
-                if(playerPattern.length === pattern.length){
-                    if(JSON.stringify(playerPattern) === JSON.stringify(pattern)){
+                if(this.playerRound.length === this.currentGame.length){
+                    if(JSON.stringify(this.playerRound) === JSON.stringify(this.currentGame)){
                         startGame();
                     }
                 }
@@ -96,7 +100,6 @@ $(document).ready(function(){
 
 
         startGame() {
-
             let game = Object.create(Game);
 
             newRound();
@@ -136,6 +139,9 @@ $(document).ready(function(){
         // console.log(num);
         return array[num];
     }
+
+    $('#start-button').click(startGame);
+
 
 
     // Game.prototype.highlightBox = function () {
@@ -186,16 +192,16 @@ $(document).ready(function(){
     //         }
     //     }, 2000)
     // }
-
-
-    const userRound = () => {
-        //need to get users click pattern
-        let userPattern = [];
-
-
-
-        //if user click pattern matches pattern then call startGame again
-    }
+    //
+    //
+    // const userRound = () => {
+    //     //need to get users click pattern
+    //     let userPattern = [];
+    //
+    //
+    //
+    //     //if user click pattern matches pattern then call startGame again
+    // }
 
     // const newRound = () => {
     //     let scoreboardCounter = document.getElementsByClassName('scoreboard-text');
@@ -275,7 +281,6 @@ $(document).ready(function(){
 
 
     //adding event listener on start button to start game
-    $('#start-button').click(startGame);
     // startButton.addEventListener('click', startGame);
 
     //click events on color boxes
