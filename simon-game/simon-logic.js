@@ -5,7 +5,7 @@ $(document).ready(function(){
     class Game {
         constructor() {
             this.count = 0;
-            this.ids = ['#ul', '#ur', '#ll', '#lr'];
+            this.round = 1;
             this.currentGame = [];
             this.playerRound = [];
         }
@@ -20,51 +20,66 @@ $(document).ready(function(){
 
         //function that highlights boxes based on the elements in the currentGame array
         boxHighlightPattern() {
-            console.log("TEST TEST TEST TEST")
-            let interval = setInterval(() => {
-                if(this.count >= this.currentGame.length){
-                    clearInterval(interval)
-                    console.log("all done");
-                }else{
-                    switch (this.currentGame[this.count]){
-                        case 'ul':
-                            $('#ul').addClass('ul-active');
-                            setTimeout(() => {
-                                $('#ul').removeClass('ul-active');
-                            }, 1000)
-                            break;
-                        case 'ur':
-                            $('#ur').addClass('ur-active');
-                            setTimeout(() => {
-                                $('#ur').removeClass('ur-active');
-                            }, 1000)
-                            break;
-                        case 'll':
-                            $('#ll').addClass('ll-active')
-                            setTimeout(() => {
-                                $('#ll').removeClass('ll-active')
-                            }, 1000)
-                            break;
-                        case 'lr':
-                            $('#lr').addClass('lr-active')
-                            setTimeout(() => {
-                                $('#lr').removeClass('lr-active')
-                            }, 1000)
-                            break;
+            console.log("boxHighlightPattern method start")
+            console.log('Current Count: ' + this.count);
+            console.log('Current Game Length: ' + this.currentGame.length);
+                let interval = setInterval(() => {
+                    if (this.count >= this.currentGame.length) {
+                        clearInterval(interval)
+                        console.log("all done");
+                    } else {
+                        switch (this.currentGame[this.count]) {
+                            case 'ul':
+                                $('#ul').addClass('ul-active');
+                                setTimeout(() => {
+                                    $('#ul').removeClass('ul-active');
+                                }, 1000)
+                                break;
+                            case 'ur':
+                                $('#ur').addClass('ur-active');
+                                setTimeout(() => {
+                                    $('#ur').removeClass('ur-active');
+                                }, 1000)
+                                break;
+                            case 'll':
+                                $('#ll').addClass('ll-active')
+                                setTimeout(() => {
+                                    $('#ll').removeClass('ll-active')
+                                }, 1000)
+                                break;
+                            case 'lr':
+                                $('#lr').addClass('lr-active')
+                                setTimeout(() => {
+                                    $('#lr').removeClass('lr-active')
+                                }, 1000)
+                                break;
+                        }
                     }
                     this.count++
+                }, 2000)
+            this.count = 0;
+        }
+
+        //check to see if user input matches currentGame
+        checkIfInputIsCorrect(){
+            if(this.playerRound.length === this.currentGame.length){
+                if(JSON.stringify(this.playerRound) === JSON.stringify(this.currentGame)){
+                    this.startGame();
                 }
-            }, 2000)
+            }
         }
 
         //updates scoreboard text on page
         updateScoreboard() {
-            let scoreboardCounter = document.getElementsByClassName('scoreboard-text');
-            scoreboardCounter.innerText = 'Round: ' + this.count;
+            // let scoreboardCounter = document.getElementsByClassName('scoreboard-text');
+            // scoreboardCounter.innerText = 'Round: ' + this.count;
+            $('.scoreboard-text').text('Round: ' + this.round);
+            this.round++;
         }
 
         //adds a new element to currentGame array and then calls boxHighlightPattern to light up boxes with new pattern
         newRound() {
+            console.log("newRound method start")
             this.updateScoreboard();
             this.playerRound = [];
             setTimeout(() => {
@@ -75,32 +90,36 @@ $(document).ready(function(){
 
                 switch (getRandomIndex(boxes, randomNumber)){
                     case 'ul':
+                        console.log('ul pushed into currentGame array');
                         this.currentGame.push('ul');
+                        console.log(this.currentGame);
                         this.boxHighlightPattern();
                         break;
                     case 'ur':
+                        console.log('ur pushed into currentGame array');
                         this.currentGame.push('ur');
+                        console.log(this.currentGame);
                         this.boxHighlightPattern();
                         break;
                     case 'll':
+                        console.log('ll pushed into currentGame array');
                         this.currentGame.push('ll');
+                        console.log(this.currentGame);
                         this.boxHighlightPattern();
                         break;
                     case 'lr':
+                        console.log('lr pushed into currentGame array');
                         this.currentGame.push('lr');
+                        console.log(this.currentGame);
                         this.boxHighlightPattern();
                         break;
                 }
-                // if(this.playerRound.length === this.currentGame.length){
-                //     if(JSON.stringify(this.playerRound) === JSON.stringify(this.currentGame)){
-                //         startGame();
-                //     }
-                // }
-            }, 2000)
+            }, 1000)
         }
 
 
         startGame() {
+            console.log("startGame method start")
             this.newRound();
             const upperLeftBox = document.getElementById('ul');
             const upperRightBox = document.getElementById('ur');
@@ -108,16 +127,21 @@ $(document).ready(function(){
             const lowerRightBox = document.getElementById('lr');
             upperLeftBox.onclick = () => {
                 this.playerRound.push('ul');
+                this.checkIfInputIsCorrect();
             }
             upperRightBox.onclick = () => {
                 this.playerRound.push('ur');
+                this.checkIfInputIsCorrect();
             }
             lowerLeftBox.onclick = () => {
-                this.playerRound.push('ll')
+                this.playerRound.push('ll');
+                this.checkIfInputIsCorrect();
             }
             lowerRightBox.onclick = () => {
                 this.playerRound.push('lr');
+                this.checkIfInputIsCorrect();
             }
+
             console.log("PLAYER ROUND: " + this.playerRound.length);
             console.log("PATTERN LENGTH: " + this.currentGame.length);
         }
