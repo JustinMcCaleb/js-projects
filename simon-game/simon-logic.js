@@ -5,7 +5,7 @@ $(document).ready(function(){
     class Game {
         constructor() {
             this.count = 0;
-            this.ids = ['#ul', '#ur', '#ll', '#lr'];
+            this.round = 1;
             this.currentGame = [];
             this.playerRound = [];
         }
@@ -73,7 +73,8 @@ $(document).ready(function(){
         updateScoreboard() {
             // let scoreboardCounter = document.getElementsByClassName('scoreboard-text');
             // scoreboardCounter.innerText = 'Round: ' + this.count;
-            $('.scoreboard-text').text('Round: ' + this.count);
+            $('.scoreboard-text').text('Round: ' + this.round);
+            this.round++;
         }
 
         //adds a new element to currentGame array and then calls boxHighlightPattern to light up boxes with new pattern
