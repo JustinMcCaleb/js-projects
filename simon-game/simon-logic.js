@@ -22,16 +22,14 @@ $(document).ready(function(){
         boxHighlightPattern() {
             console.log("boxHighlightPattern method start")
             console.log('Current Count: ' + this.count);
-            console.log('Current Game: ' + this.currentGame);
-            for(let element of this.currentGame) {
-                console.log('Element in For Of loop: ' + element);
+            console.log('Current Game Length: ' + this.currentGame.length);
                 let interval = setInterval(() => {
                     if (this.count >= this.currentGame.length) {
                         clearInterval(interval)
                         console.log("all done");
                     } else {
-                        console.log(this.currentGame);
-                        switch (cg) {
+                        console.log('DO I EVER SEE THIS?');
+                        switch (this.currentGame[this.count]) {
                             case 'ul':
                                 $('#ul').addClass('ul-active');
                                 setTimeout(() => {
@@ -58,9 +56,9 @@ $(document).ready(function(){
                                 break;
                         }
                     }
+                    this.count++
                 }, 2000)
-            }
-            this.count++
+            this.count = 0;
         }
 
         //updates scoreboard text on page
