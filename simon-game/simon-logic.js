@@ -62,7 +62,11 @@ $(document).ready(function(){
 
         //check to see if user input matches currentGame
         checkIfInputIsCorrect(){
-
+            if(this.playerRound.length === this.currentGame.length){
+                if(JSON.stringify(this.playerRound) === JSON.stringify(this.currentGame)){
+                    this.startGame();
+                }
+            }
         }
 
         //updates scoreboard text on page
@@ -121,21 +125,21 @@ $(document).ready(function(){
             const lowerRightBox = document.getElementById('lr');
             upperLeftBox.onclick = () => {
                 this.playerRound.push('ul');
+                this.checkIfInputIsCorrect();
             }
             upperRightBox.onclick = () => {
                 this.playerRound.push('ur');
+                this.checkIfInputIsCorrect();
             }
             lowerLeftBox.onclick = () => {
-                this.playerRound.push('ll')
+                this.playerRound.push('ll');
+                this.checkIfInputIsCorrect();
             }
             lowerRightBox.onclick = () => {
                 this.playerRound.push('lr');
+                this.checkIfInputIsCorrect();
             }
-            if(this.playerRound.length === this.currentGame.length){
-                if(JSON.stringify(this.playerRound) === JSON.stringify(this.currentGame)){
-                    this.startGame();
-                }
-            }
+
             console.log("PLAYER ROUND: " + this.playerRound.length);
             console.log("PATTERN LENGTH: " + this.currentGame.length);
         }
