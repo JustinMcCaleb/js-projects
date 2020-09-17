@@ -24,7 +24,7 @@ $(document).ready(function(){
                     clearInterval(interval)
                     console.log("all done");
                 }else{
-                    switch (pattern[count]){
+                    switch (this.currentGame[this.count]){
                         case 'ul':
                             $('#ul').addClass('ul-active');
                             setTimeout(() => {
@@ -55,12 +55,13 @@ $(document).ready(function(){
             }, 2000)
         }
 
+        //updates scoreboard text on page
         updateScoreboard() {
             let scoreboardCounter = document.getElementsByClassName('scoreboard-text');
             scoreboardCounter.innerText = 'Round: ' + this.count;
         }
 
-
+        //adds a new element to currentGame array and then calls boxHighlightPattern to light up boxes with new pattern
         newRound() {
             this.updateScoreboard();
             this.playerRound = [];
@@ -69,8 +70,6 @@ $(document).ready(function(){
                 let randomNumber = getRandomArbitrary(1,4)
 
                 let boxes = ['ul', 'ur', 'll', 'lr'];
-
-                console.log("RANDOM INDEX: " + getRandomIndex(boxes, randomNumber))
 
                 switch (getRandomIndex(boxes, randomNumber)){
                     case 'ul':
@@ -90,39 +89,32 @@ $(document).ready(function(){
                         this.boxHighlightPattern();
                         break;
                 }
-                if(this.playerRound.length === this.currentGame.length){
-                    if(JSON.stringify(this.playerRound) === JSON.stringify(this.currentGame)){
-                        startGame();
-                    }
-                }
+                // if(this.playerRound.length === this.currentGame.length){
+                //     if(JSON.stringify(this.playerRound) === JSON.stringify(this.currentGame)){
+                //         startGame();
+                //     }
+                // }
             }, 2000)
         }
 
 
         startGame() {
-            let game = Object.create(Game);
-
-            newRound();
-            game.playerRound = [];
+            this.newRound();
             const upperLeftBox = document.getElementById('ul');
             const upperRightBox = document.getElementById('ur');
             const lowerLeftBox = document.getElementById('ll');
             const lowerRightBox = document.getElementById('lr');
             upperLeftBox.onclick = () => {
-                playerPattern.push('ul');
-                console.log(playerPattern);
+                this.playerRound.push('ul');
             }
             upperRightBox.onclick = () => {
-                playerPattern.push('ur');
-                console.log(playerPattern);
+                this.playerRound.push('ur');
             }
             lowerLeftBox.onclick = () => {
-                playerPattern.push('ll')
-                console.log(playerPattern);
+                this.playerRound.push('ll')
             }
             lowerRightBox.onclick = () => {
-                playerPattern.push('lr');
-                console.log(playerPattern);
+                this.playerRound.push('lr');
             }
             console.log("PLAYER ROUND: " + playerPattern.length);
             console.log("PATTERN LENGTH: " + pattern.length);
@@ -140,7 +132,9 @@ $(document).ready(function(){
         return array[num];
     }
 
-    $('#start-button').click(startGame);
+    let game = new Game();
+
+    $('#start-button').click(game.startGame());
 
 
 
