@@ -10,6 +10,7 @@ $(document).ready(function(){
             this.playerRound = [];
         }
 
+
         //resets counts and arrays to zero
         newGame() {
             this.count = 0;
@@ -19,6 +20,7 @@ $(document).ready(function(){
 
         //function that highlights boxes based on the elements in the currentGame array
         boxHighlightPattern() {
+            console.log("TEST TEST TEST TEST")
             let interval = setInterval(() => {
                 if(this.count >= this.currentGame.length){
                     clearInterval(interval)
@@ -116,8 +118,12 @@ $(document).ready(function(){
             lowerRightBox.onclick = () => {
                 this.playerRound.push('lr');
             }
-            console.log("PLAYER ROUND: " + playerPattern.length);
-            console.log("PATTERN LENGTH: " + pattern.length);
+            console.log("PLAYER ROUND: " + this.playerRound.length);
+            console.log("PATTERN LENGTH: " + this.currentGame.length);
+        }
+
+        startButtonTest(){
+            return "Start Button Pushed"
         }
 
     }
@@ -134,7 +140,10 @@ $(document).ready(function(){
 
     let game = new Game();
 
-    $('#start-button').click(game.startGame());
+
+    $('#start-button').click(function () {
+        game.startGame();
+    });
 
 
 
@@ -269,9 +278,9 @@ $(document).ready(function(){
     //     console.log("PATTERN LENGTH: " + pattern.length);
     // }
 
-    const clicked = (box) => {
-        console.log(box);
-    }
+    // const clicked = (box) => {
+    //     console.log(box);
+    // }
 
 
     //adding event listener on start button to start game

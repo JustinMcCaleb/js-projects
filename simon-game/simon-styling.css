@@ -45,7 +45,7 @@ body {
     transition: background-color;
 }
 .ul-active {background-color: rgba(255,0,144,1);}
-.upper-left:hover {background-color: rgba(255,0,144,1); !important;}
+.upper-left:hover {background-color: rgba(255,0,144,1);}
 
 
 
@@ -54,7 +54,7 @@ body {
     transition: background-color;
 }
 .ur-active {background-color: rgba(77,77,255,1);}
-.upper-right:hover {background-color: rgba(77,77,255,1); !important;}
+.upper-right:hover {background-color: rgba(77,77,255,1);}
 
 
 
@@ -63,7 +63,7 @@ body {
     transition: background-color;
 }
 .ll-active{background-color: rgba(0,255,0,1);}
-.lower-left:hover{background-color: rgba(0,255,0,1); !important;}
+.lower-left:hover{background-color: rgba(0,255,0,1);}
 
 
 
@@ -72,7 +72,7 @@ body {
     transition: background-color;
 }
 .lr-active{background-color: rgba(255,255,0,1);}
-.lower-right:hover{background-color: rgba(255,255,0,1); !important;}
+.lower-right:hover{background-color: rgba(255,255,0,1);}
 
 .scoreboard{
     display: flex;
