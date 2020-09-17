@@ -20,39 +20,43 @@ $(document).ready(function(){
 
         //function that highlights boxes based on the elements in the currentGame array
         boxHighlightPattern() {
-            console.log("TEST TEST TEST TEST")
+            console.log("boxHighlightPattern method start")
             let interval = setInterval(() => {
                 if(this.count >= this.currentGame.length){
                     clearInterval(interval)
                     console.log("all done");
                 }else{
-                    switch (this.currentGame[this.count]){
-                        case 'ul':
-                            $('#ul').addClass('ul-active');
-                            setTimeout(() => {
-                                $('#ul').removeClass('ul-active');
-                            }, 1000)
-                            break;
-                        case 'ur':
-                            $('#ur').addClass('ur-active');
-                            setTimeout(() => {
-                                $('#ur').removeClass('ur-active');
-                            }, 1000)
-                            break;
-                        case 'll':
-                            $('#ll').addClass('ll-active')
-                            setTimeout(() => {
-                                $('#ll').removeClass('ll-active')
-                            }, 1000)
-                            break;
-                        case 'lr':
-                            $('#lr').addClass('lr-active')
-                            setTimeout(() => {
-                                $('#lr').removeClass('lr-active')
-                            }, 1000)
-                            break;
+                    console.log(this.currentGame);
+                    for(let cg of this.currentGame){
+                        switch (cg){
+                            case 'ul':
+                                $('#ul').addClass('ul-active');
+                                setTimeout(() => {
+                                    $('#ul').removeClass('ul-active');
+                                }, 1000)
+                                break;
+                            case 'ur':
+                                $('#ur').addClass('ur-active');
+                                setTimeout(() => {
+                                    $('#ur').removeClass('ur-active');
+                                }, 1000)
+                                break;
+                            case 'll':
+                                $('#ll').addClass('ll-active')
+                                setTimeout(() => {
+                                    $('#ll').removeClass('ll-active')
+                                }, 1000)
+                                break;
+                            case 'lr':
+                                $('#lr').addClass('lr-active')
+                                setTimeout(() => {
+                                    $('#lr').removeClass('lr-active')
+                                }, 1000)
+                                break;
+                        }
                     }
                     this.count++
+                    this.boxHighlightPattern();
                 }
             }, 2000)
         }
@@ -65,6 +69,7 @@ $(document).ready(function(){
 
         //adds a new element to currentGame array and then calls boxHighlightPattern to light up boxes with new pattern
         newRound() {
+            console.log("newRound method start")
             this.updateScoreboard();
             this.playerRound = [];
             setTimeout(() => {
@@ -101,6 +106,7 @@ $(document).ready(function(){
 
 
         startGame() {
+            console.log("startGame method start")
             this.newRound();
             const upperLeftBox = document.getElementById('ul');
             const upperRightBox = document.getElementById('ur');
