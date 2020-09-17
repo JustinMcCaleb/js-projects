@@ -28,7 +28,6 @@ $(document).ready(function(){
                         clearInterval(interval)
                         console.log("all done");
                     } else {
-                        console.log('DO I EVER SEE THIS?');
                         switch (this.currentGame[this.count]) {
                             case 'ul':
                                 $('#ul').addClass('ul-active');
@@ -59,6 +58,11 @@ $(document).ready(function(){
                     this.count++
                 }, 2000)
             this.count = 0;
+        }
+
+        //check to see if user input matches currentGame
+        checkIfInputIsCorrect(){
+
         }
 
         //updates scoreboard text on page
@@ -104,11 +108,6 @@ $(document).ready(function(){
                         this.boxHighlightPattern();
                         break;
                 }
-                // if(this.playerRound.length === this.currentGame.length){
-                //     if(JSON.stringify(this.playerRound) === JSON.stringify(this.currentGame)){
-                //         startGame();
-                //     }
-                // }
             }, 1000)
         }
 
@@ -131,6 +130,11 @@ $(document).ready(function(){
             }
             lowerRightBox.onclick = () => {
                 this.playerRound.push('lr');
+            }
+            if(this.playerRound.length === this.currentGame.length){
+                if(JSON.stringify(this.playerRound) === JSON.stringify(this.currentGame)){
+                    this.startGame();
+                }
             }
             console.log("PLAYER ROUND: " + this.playerRound.length);
             console.log("PATTERN LENGTH: " + this.currentGame.length);
