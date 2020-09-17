@@ -50,16 +50,14 @@ $(document).ready(function(){
                             }, 1000)
                             break;
                     }
-                    count++
+                    this.count++
                 }
             }, 2000)
         }
 
         updateScoreboard() {
             let scoreboardCounter = document.getElementsByClassName('scoreboard-text');
-            let round = 0;
-            round++;
-            scoreboardCounter.innerText = 'Round: ' + round;
+            scoreboardCounter.innerText = 'Round: ' + this.count;
         }
 
 
