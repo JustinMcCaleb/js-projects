@@ -2,15 +2,15 @@
 
 $(document).ready(function(){
 
-    let Game = {
-        count: 0,
-        ids: ['#ul', '#ur', '#ll', '#lr'],
-        currentGame: [],
-        playerRound: []
-    }
+    class Game {
+        constructor() {
+            this.count = 0;
+            this.ids = ['#ul', '#ur', '#ll', '#lr'];
+            this.currentGame = [];
+            this.playerRound = [];
+        }
 
-    let pattern = [];
-    let playerPattern = [];
+    }
 
     const getRandomArbitrary = (min, max) => {
         let randNum = Math.random() * (max - min) + min;
@@ -22,7 +22,7 @@ $(document).ready(function(){
         return array[num];
     }
 
-    const highlightBox = () => {
+    Game.prototype.highlightBox = function () {
         console.log("==========================")
         console.log(pattern);
         let count = 0;
