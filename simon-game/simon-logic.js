@@ -55,14 +55,16 @@ $(document).ready(function(){
             }, 2000)
         }
 
-        updateScoreboard() {}
-
-
-        newRound() {
+        updateScoreboard() {
             let scoreboardCounter = document.getElementsByClassName('scoreboard-text');
             let round = 0;
             round++;
             scoreboardCounter.innerText = 'Round: ' + round;
+        }
+
+
+        newRound() {
+            this.updateScoreboard();
             this.playerRound = [];
             setTimeout(() => {
 
