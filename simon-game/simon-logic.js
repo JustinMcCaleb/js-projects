@@ -71,14 +71,15 @@ $(document).ready(function(){
 
         //updates scoreboard text on page
         updateScoreboard() {
-            let scoreboardCounter = document.getElementsByClassName('scoreboard-text');
-            scoreboardCounter.innerText = 'Round: ' + this.count;
+            // let scoreboardCounter = document.getElementsByClassName('scoreboard-text');
+            // scoreboardCounter.innerText = 'Round: ' + this.count;
+            $('.scoreboard-text').text('Round: ' + this.count);
         }
 
         //adds a new element to currentGame array and then calls boxHighlightPattern to light up boxes with new pattern
         newRound() {
             console.log("newRound method start")
-            // this.updateScoreboard();
+            this.updateScoreboard();
             this.playerRound = [];
             setTimeout(() => {
 
