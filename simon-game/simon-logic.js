@@ -21,14 +21,17 @@ $(document).ready(function(){
         //function that highlights boxes based on the elements in the currentGame array
         boxHighlightPattern() {
             console.log("boxHighlightPattern method start")
-            let interval = setInterval(() => {
-                if(this.count >= this.currentGame.length){
-                    clearInterval(interval)
-                    console.log("all done");
-                }else{
-                    console.log(this.currentGame);
-                    for(let cg of this.currentGame){
-                        switch (cg){
+            console.log('Current Count: ' + this.count);
+            console.log('Current Game: ' + this.currentGame);
+            for(let element of this.currentGame) {
+                console.log('Element in For Of loop: ' + element);
+                let interval = setInterval(() => {
+                    if (this.count >= this.currentGame.length) {
+                        clearInterval(interval)
+                        console.log("all done");
+                    } else {
+                        console.log(this.currentGame);
+                        switch (cg) {
                             case 'ul':
                                 $('#ul').addClass('ul-active');
                                 setTimeout(() => {
@@ -55,10 +58,9 @@ $(document).ready(function(){
                                 break;
                         }
                     }
-                    this.count++
-                    this.boxHighlightPattern();
-                }
-            }, 2000)
+                }, 2000)
+            }
+            this.count++
         }
 
         //updates scoreboard text on page
@@ -70,7 +72,7 @@ $(document).ready(function(){
         //adds a new element to currentGame array and then calls boxHighlightPattern to light up boxes with new pattern
         newRound() {
             console.log("newRound method start")
-            this.updateScoreboard();
+            // this.updateScoreboard();
             this.playerRound = [];
             setTimeout(() => {
 
@@ -80,19 +82,27 @@ $(document).ready(function(){
 
                 switch (getRandomIndex(boxes, randomNumber)){
                     case 'ul':
+                        console.log('ul pushed into currentGame array');
                         this.currentGame.push('ul');
+                        console.log(this.currentGame);
                         this.boxHighlightPattern();
                         break;
                     case 'ur':
+                        console.log('ur pushed into currentGame array');
                         this.currentGame.push('ur');
+                        console.log(this.currentGame);
                         this.boxHighlightPattern();
                         break;
                     case 'll':
+                        console.log('ll pushed into currentGame array');
                         this.currentGame.push('ll');
+                        console.log(this.currentGame);
                         this.boxHighlightPattern();
                         break;
                     case 'lr':
+                        console.log('lr pushed into currentGame array');
                         this.currentGame.push('lr');
+                        console.log(this.currentGame);
                         this.boxHighlightPattern();
                         break;
                 }
@@ -101,7 +111,7 @@ $(document).ready(function(){
                 //         startGame();
                 //     }
                 // }
-            }, 2000)
+            }, 1000)
         }
 
 
