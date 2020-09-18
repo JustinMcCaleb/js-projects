@@ -102,6 +102,12 @@ body {
     background-color: #00C9FF;
     border-radius: 10px;
     border-style: none;
+    transition: height 200ms ease-in-out, width 200ms ease-in-out;
+}
+
+.start-game:hover {
+    height: 60px;
+    width: 220px;
 }
 
 
