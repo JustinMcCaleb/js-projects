@@ -45,36 +45,56 @@ body {
 
 .upper-left {
     background-color: rgba(255,0,144,.3);
-    transition: background-color;
+    transition: background-color, height 100ms linear, width 100ms linear;
 }
-.ul-active {background-color: rgba(255,0,144,1);}
-.upper-left:hover {background-color: rgba(255,0,144,1);}
+.ul-active {
+    background-color: rgba(255,0,144,1);
+    height: 210px;
+    width: 210px;
+}
+.upper-left:hover {
+    background-color: rgba(255,0,144,1);
+    height: 210px;
+    width: 210px;
+}
 
 
 
 .upper-right {
     background-color: rgba(77,77,255,.3);
-    transition: background-color;
+    transition: background-color, height 100ms linear, width 100ms linear;
 }
-.ur-active {background-color: rgba(77,77,255,1);}
+.ur-active {
+    background-color: rgba(77,77,255,1);
+    height: 210px;
+    width: 210px;
+}
 .upper-right:hover {background-color: rgba(77,77,255,1);}
 
 
 
 .lower-left {
     background-color: rgba(0,255,0,.3);
-    transition: background-color;
+    transition: background-color, height 100ms linear, width 100ms linear;
 }
-.ll-active{background-color: rgba(0,255,0,1);}
+.ll-active{
+    background-color: rgba(0,255,0,1);
+    height: 210px;
+    width: 210px;
+}
 .lower-left:hover{background-color: rgba(0,255,0,1);}
 
 
 
 .lower-right {
     background-color: rgba(255,255,0,.3);
-    transition: background-color;
+    transition: background-color, height 100ms linear, width 100ms linear;
 }
-.lr-active{background-color: rgba(255,255,0,1);}
+.lr-active{
+    background-color: rgba(255,255,0,1);
+    height: 210px;
+    width: 210px;
+}
 .lower-right:hover{background-color: rgba(255,255,0,1);}
 
 .scoreboard{
@@ -88,26 +108,37 @@ body {
 }
 
 .scoreboard-text {
-    height: 50px;
+    height: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 3em;
     margin-bottom: 30px;
 }
 
+.scoreboard-button-div{
+    height: 50%;
+    display: flex;
+}
+
 .start-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     width: 200px;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: 'Concert One', cursive;
     background-color: #00C9FF;
     border-radius: 10px;
     border-style: none;
-    transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    transition: height 200ms linear, width 200ms linear, font-size 200ms linear;
 }
 
 .start-game:hover {
     height: 60px;
     width: 220px;
+    font-size: 35px;
 }
 
 
