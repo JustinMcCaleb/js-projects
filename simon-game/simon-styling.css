@@ -17,6 +17,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Concert One', cursive;
 }
 /*Container for the 4 color boxes*/
 .container {
