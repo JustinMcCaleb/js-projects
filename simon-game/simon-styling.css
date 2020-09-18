@@ -78,6 +78,8 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    width: 500px;
+    height: 200px;
 }
 
 .scoreboard-text {
@@ -92,6 +94,7 @@ body {
     width: 200px;
     font-size: 20px;
     background-color: #00C9FF;
+
 }
 
 
