@@ -39,6 +39,9 @@ body {
 .upper-left-container, .upper-right-container{
     height: 100%;
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Class that modifies all color boxes*/
