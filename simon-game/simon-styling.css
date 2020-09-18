@@ -36,7 +36,7 @@ body {
     align-items: center;
 }
 
-.upper-left-container, .upper-right-container{
+.upper-left-container, .upper-right-container, .lower-left-container, .lower-right-container{
     height: 100%;
     width: 50%;
     display: flex;
