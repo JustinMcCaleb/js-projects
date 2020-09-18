@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <title>Simon-Game</title>
     <link rel="stylesheet" href="simon-styling.css">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="container">
     <div class="upper-container">
-        <div class="color-box upper-left" id="ul"></div>
-        <div class="color-box upper-right" id="ur"></div>
+        <div class="upper-left-container">
+            <div class="color-box upper-left" id="ul"></div>
+        </div>
+        <div class="upper-right-container">
+            <div class="color-box upper-right" id="ur"></div>
+        </div>
     </div>
     <div class="lower-container">
-        <div class="color-box lower-left" id="ll"></div>
-        <div class="color-box lower-right" id="lr"></div>
+        <div class="lower-left-container">
+            <div class="color-box lower-left" id="ll"></div>
+        </div>
+        <div class="lower-right-container">
+            <div class="color-box lower-right" id="lr"></div>
+        </div>
     </div>
 </div>
 <div class="scoreboard">
-    <div class="scoreboard-text"></div>
-    <button class="start-game" id="start-button">Start Game</button>
+    <div class="scoreboard-text">Hit the start button!</div>
+    <div class="scoreboard-button-div">
+        <button class="start-game" id="start-button">Start Game</button>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>

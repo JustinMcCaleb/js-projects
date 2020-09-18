@@ -8,19 +8,22 @@ html {
 }
 
 body {
+    padding: 0;
+    margin: 0;
     height: 100%;
     background: rgb(175,175,175);
-    background: linear-gradient(45deg, rgba(175,175,175,1) 15%, rgba(72,79,80,1) 86%);
+    background: linear-gradient(45deg, rgba(175,175,175,1) 15%, rgba(72,79,80,1) 96%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Concert One', cursive;
 }
 /*Container for the 4 color boxes*/
 .container {
-    height: 500px;
-    width: 500px;
-    border: 5px solid black;
+    height: 700px;
+    width: 800px;
+    /*border: 5px solid black;*/
     display: flex;
     flex-direction: column;
 }
@@ -29,69 +32,135 @@ body {
     width: 100%;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
+
+.upper-left-container, .upper-right-container, .lower-left-container, .lower-right-container{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*Class that modifies all color boxes*/
 .color-box {
-    height: 200px;
-    width: 200px;
-    border: 5px solid black;
+    height: 250px;
+    width: 250px;
+    border-radius: 120px;
+    /*border: 5px solid black;*/
 }
 
 
 .upper-left {
     background-color: rgba(255,0,144,.3);
-    transition: background-color;
+    transition: background-color, height 50ms linear, width 50ms linear;
 }
-.ul-active {background-color: rgba(255,0,144,1);}
-.upper-left:hover {background-color: rgba(255,0,144,1);}
+.ul-active {
+    background-color: rgba(255,0,144,1);
+    height: 260px;
+    width: 260px;
+}
+.upper-left:hover {
+    background-color: rgba(255,0,144,1);
+    height: 260px;
+    width: 260px;
+}
 
 
 
 .upper-right {
     background-color: rgba(77,77,255,.3);
-    transition: background-color;
+    transition: background-color, height 50ms linear, width 50ms linear;
 }
-.ur-active {background-color: rgba(77,77,255,1);}
-.upper-right:hover {background-color: rgba(77,77,255,1);}
+.ur-active {
+    background-color: rgba(77,77,255,1);
+    height: 260px;
+    width: 260px;
+}
+.upper-right:hover {
+    background-color: rgba(77,77,255,1);
+    height: 260px;
+    width: 260px;
+}
 
 
 
 .lower-left {
     background-color: rgba(0,255,0,.3);
-    transition: background-color;
+    transition: background-color, height 50ms linear, width 50ms linear;
 }
-.ll-active{background-color: rgba(0,255,0,1);}
-.lower-left:hover{background-color: rgba(0,255,0,1);}
+.ll-active{
+    background-color: rgba(0,255,0,1);
+    height: 260px;
+    width: 260px;
+}
+.lower-left:hover{
+    background-color: rgba(0,255,0,1);
+    height: 260px;
+    width: 260px;
+}
 
 
 
 .lower-right {
     background-color: rgba(255,255,0,.3);
-    transition: background-color;
+    transition: background-color, height 50ms linear, width 50ms linear;
 }
-.lr-active{background-color: rgba(255,255,0,1);}
-.lower-right:hover{background-color: rgba(255,255,0,1);}
+.lr-active{
+    background-color: rgba(255,255,0,1);
+    height: 260px;
+    width: 260px;
+}
+.lower-right:hover{
+    background-color: rgba(255,255,0,1);
+    height: 260px;
+    width: 260px;
+}
 
 .scoreboard{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
+    width: 500px;
+    height: 200px;
 }
 
 .scoreboard-text {
-    height: 50px;
+    height: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.scoreboard-button-div{
+    height: 50%;
+    display: flex;
 }
 
 .start-game {
-    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
     width: 200px;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: 'Concert One', cursive;
     background-color: #00C9FF;
+    border-radius: 10px;
+    border-style: none;
+    transition: height 200ms linear, width 200ms linear, font-size 200ms linear;
+}
+
+.start-game:hover {
+    height: 60px;
+    width: 220px;
+    font-size: 35px;
 }
 
 
