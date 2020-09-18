@@ -35,6 +35,12 @@ body {
     justify-content: space-evenly;
     align-items: center;
 }
+
+.upper-left-container, .upper-right-container{
+    height: 100%;
+    width: 50%;
+}
+
 /*Class that modifies all color boxes*/
 .color-box {
     height: 200px;
