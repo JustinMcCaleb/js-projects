@@ -32,11 +32,21 @@ const printMyNameNew = (name) => {
 printMyNameNew('Justin - NEW')
 
 //alternate ways to write arrow functions
-//if there is only ONE parameter you can omit the parenthesis
-const addTwo = num => {
-    return num + 2;
-}
 //if you have ZERO parameters you HAVE to use parenthesis
 const sayHello = () => {
     console.log("hello");
 }
+//if there is only ONE parameter you can omit the parenthesis
+const addTwo = num => {
+    return num + 2;
+}
+//if you have MULTIPLE parameters
+const person = (name, age) => {
+    console.log(name + " is " + age + " years old.");
+}
+person('justin', 26)
+
+//only having a return statement in the function.
+// You OMIT return and the curly brackets
+const addThree = number => number + 3;
+console.log(addThree(3));
