@@ -131,3 +131,23 @@ console.log(filter(1,2,3,1,3,5,1,3,1));
 // const numberArray = [1,2,3,4,5];
 // [num1, num2] = numberArray;
 // console.log(num1, num2);
+
+
+//Primitive vs Reference
+//Primitive: Strings, numbers, boolean
+// Copying a primitive type stores the ACTUAL value in the new copy
+let myNum = 1;
+let newNum = myNum;
+//newNum now holds the value of 1
+
+//Reference: Objects, Arrays
+//if I copy a reference type I am ONLY copying the pointer that points to that specific object
+//defining the tree object
+const tree = {
+    type: 'oak'
+}
+//assigning newTree the value of tree (but it's only assigning the pointer to the object not the object values)
+const newTree = tree;
+//so if we change the type property and then log newTree we will see 'cedar' because newTree value is only a pointer to the original object
+tree.type = 'cedar';
+console.log(newTree);
