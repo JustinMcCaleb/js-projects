@@ -30,3 +30,9 @@ const printMyNameNew = (name) => {
     console.log(name);
 }
 printMyNameNew('Justin - NEW')
+
+//alternate ways to write arrow functions
+//if there is only ONE parameter you can omit the parenthesis
+const addTwo = num => {
+    return num + 2;
+}
