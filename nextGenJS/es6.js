@@ -79,3 +79,23 @@ class Person extends Human{
 const personObject = new Person();
 personObject.describePerson();
 personObject.printGender();
+
+//the NEWEST JS syntax allows for even less code to declare a class.
+//NO constructor or this keyword & using arrow functions for the methods
+class Animal {
+    name = undefined;
+    age = undefined;
+
+    printName = () => this.name;
+}
+
+class Dog extends Animal{
+    name = 'Woody';
+    age = 12;
+    breed = 'Frenchie';
+
+    printBreed = () => this.breed;
+}
+const pet = new Dog();
+console.log(pet.printName());
+console.log(pet.printBreed());
