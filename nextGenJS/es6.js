@@ -36,3 +36,7 @@ printMyNameNew('Justin - NEW')
 const addTwo = num => {
     return num + 2;
 }
+//if you have ZERO parameters you HAVE to use parenthesis
+const sayHello = () => {
+    console.log("hello");
+}
