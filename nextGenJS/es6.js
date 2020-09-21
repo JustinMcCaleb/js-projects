@@ -53,11 +53,23 @@ console.log(addThree(3));
 
 //~~~~~~~~~~~ CLASSES ~~~~~~~~~~~~~~~~~
 
+//declaring a Human class with a gender property for Person to extend
+class Human {
+    constructor() {
+        this.gender = undefined;
+    }
+    printGender(){
+        console.log(this.gender);
+    }
+}
+
 //declaring a person class, using a constructor to define properties and a method that logs class properties
-class Person {
+class Person extends Human{
     constructor(){
+        super();
         this.name = 'Justin'
         this.age = 26
+        this.gender = 'Male'
     }
     describePerson() {
         console.log(this.name, this.age);
@@ -66,3 +78,4 @@ class Person {
 //creating an instance in the personObject const
 const personObject = new Person();
 personObject.describePerson();
+personObject.printGender();
