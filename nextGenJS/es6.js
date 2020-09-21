@@ -121,4 +121,8 @@ console.log(newCar);
 
 
 //REST operators are used to merge a list of function parameters into one array. It's a place holder for an unknown or changing amount of parameters
+const filter = (...args) => {
+    return args.filter(el => el === 1)
+}
 
+console.log(filter(1,2,3,1,3,5,1,3,1));
