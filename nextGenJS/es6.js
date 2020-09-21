@@ -133,7 +133,7 @@ console.log(filter(1,2,3,1,3,5,1,3,1));
 // console.log(num1, num2);
 
 
-//Primitive vs Reference
+//~~~~~~~~~~~~ Primitive vs Reference ~~~~~~~~~~~~~~~~
 //Primitive: Strings, numbers, boolean
 // Copying a primitive type stores the ACTUAL value in the new copy
 let myNum = 1;
@@ -151,3 +151,16 @@ const newTree = tree;
 //so if we change the type property and then log newTree we will see 'cedar' because newTree value is only a pointer to the original object
 tree.type = 'cedar';
 console.log(newTree);
+
+
+
+//what we can do is use the spread operator to actually make a copy of a reference type
+const building = {
+    color: 'pink',
+    stories: 3
+};
+
+const tallBuilding = {
+    ...building
+}
+
