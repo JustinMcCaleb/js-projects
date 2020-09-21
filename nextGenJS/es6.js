@@ -126,3 +126,8 @@ const filter = (...args) => {
 }
 
 console.log(filter(1,2,3,1,3,5,1,3,1));
+
+//~~~~~~~~~~~~ DESTRUCTURING ~~~~~~~~~~~~
+// const numberArray = [1,2,3,4,5];
+// [num1, num2] = numberArray;
+// console.log(num1, num2);
