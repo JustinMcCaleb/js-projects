@@ -107,3 +107,18 @@ let numArray = [1,2,3];
 
 let newNumArray = [...numArray,4,5]
 console.log(newNumArray);
+
+//using a spread operator with an object. It takes all the properties from the array named after the three dots and adds them to the new object
+const car = {
+    make: 'Nissan'
+};
+
+const newCar = {
+    ...car,
+    model: 'Rogue'
+};
+console.log(newCar);
+
+
+//REST operators are used to merge a list of function parameters into one array. It's a place holder for an unknown or changing amount of parameters
+
