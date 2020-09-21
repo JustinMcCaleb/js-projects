@@ -50,3 +50,19 @@ person('justin', 26)
 // You OMIT return and the curly brackets
 const addThree = number => number + 3;
 console.log(addThree(3));
+
+//~~~~~~~~~~~ CLASSES ~~~~~~~~~~~~~~~~~
+
+//declaring a person class, using a constructor to define properties and a method that logs class properties
+class Person {
+    constructor(){
+        this.name = 'Justin'
+        this.age = 26
+    }
+    describePerson() {
+        console.log(this.name, this.age);
+    }
+}
+//creating an instance in the personObject const
+const personObject = new Person();
+personObject.describePerson();
