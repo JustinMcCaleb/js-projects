@@ -99,3 +99,11 @@ class Dog extends Animal{
 const pet = new Dog();
 console.log(pet.printName());
 console.log(pet.printBreed());
+
+//~~~~~~~~~~~~ SPREAD and REST ~~~~~~~~~~~
+
+//using the ... spread operator you can add all the elements of an old array to a new one, and add additional elements
+let numArray = [1,2,3];
+
+let newNumArray = [...numArray,4,5]
+console.log(newNumArray);
